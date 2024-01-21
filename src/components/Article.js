@@ -16,7 +16,12 @@ function minutesToRead(min){
     if(min < 30){
         let numofIndicators = (Math.round(num / 5) * 5)/5;
         for(let i=numofIndicators; i>0; i--){
-            indicators+= "☕️ ";
+            indicators+= "☕️";
+        }
+    } else if(min>30){
+        let numofIndicators = (Math.random(num/5))/10;
+        for(let i = numofIndicators; i>0; i--){
+            indicators += "🍱";
         }
     }
     return `${indicators} ${min} min read`;
